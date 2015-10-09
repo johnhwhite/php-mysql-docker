@@ -1,0 +1,20 @@
+web:
+  dockerfile: Dockerfile-php
+  build: .
+  ports:
+    - "80"
+  links:
+    - db
+  volumes:
+    - ./html:/var/www/html
+db:
+  volumes:
+    - ./data:/var/lib/mysql
+  image: mysql:latest
+  environment:
+    MYSQL_ROOT_PASSWORD: db
+    MYSQL_DATABASE: db
+    MYSQL_USER: db
+    MYSQL_PASSWORD: db
+  expose: 
+    - "3306"
