@@ -4,7 +4,7 @@ RUN a2dismod -f autoindex && \
     apt-get update && apt-get upgrade -y && \
     apt-get install -y \
         libcurl4-gnutls-dev \
-        libpng12-dev \
+        libpng-dev \
         libxml2-dev \
         mysql-client \
         && \
